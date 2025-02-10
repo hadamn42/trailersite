@@ -1,5 +1,8 @@
 import { getMovieData, getTrailers } from "./util.mjs"
-import { trailerConstruct } from "./trailerBlock.mjs";
+import { trailerConstruct } from "./TrailerBlock.mjs";
+import { switchButton } from "./trailerSwitch.mjs";
+// import { playButton } from "./trailerPlay.mjs";
+
 
 // const url = "https://api.kinocheck.com/trailers/trending?language=en";
 const url = "https://api.kinocheck.com/trailers/";
@@ -15,7 +18,10 @@ trailers.then(function(result) {
     
     // console.log(array[0].thumbnail);
     array.splice(25, 1);
-    console.log(array);
+    // console.log(array);
     trailerConstruct(array);
 });
+
+switchButton();
+
 

@@ -7,6 +7,7 @@
     --tertiary-color: #3f36bd;
     --accent-color1: #9164bb;
     --accent-color2: #d293b9;
+    --font-hover: black;
 
     /* fonts and sizes */
     --font-body: Arial, sans-serif;
@@ -37,6 +38,28 @@ footer {
 }
 
 /* Main page trailer list */
+
+/* button */
+#switch{
+    background-color: var(--tertiary-color);
+    color: var(--font-color);
+    font-size: var(--standard-size);
+    width: 200px;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+}
+
+#switch:hover{
+    background-color: var(--accent-color2);
+    color: var(--font-hover);
+    cursor: pointer;
+}
+
+#button-holder{
+    padding-bottom: 15px;
+}
 
 #trailers-block{
     display: grid;
@@ -86,7 +109,7 @@ footer {
 .trailer-card img {
     display: block;
     margin-left: auto;
-     margin-right: auto;
+    margin-right: auto;
     /* width: 50%; */
     padding-top: 5px;
     width: 150px;
@@ -105,4 +128,8 @@ footer {
 
 .hide {
     display: none;
+}
+
+.show {
+    display: block;
 }
