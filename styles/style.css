@@ -26,6 +26,7 @@ body {
 header {
     background-color: var(--secondary-color);
     font-size: var(--title-size);
+    text-align: center;
 }
 /* main {
 
@@ -98,4 +99,10 @@ footer {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: center;
+}
+
+/* hide or show the player box */
+
+.hide {
+    display: none;
 }

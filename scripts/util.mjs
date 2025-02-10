@@ -1,5 +1,9 @@
-export async function getTrailers(url){
-    const response = await fetch(url, {
+export async function getTrailers(url, trailerType = "latest"){
+    const setUrl = url + trailerType + "?language=en";
+    const headerName = document.getElementById("trailers-title");
+    headerName.innerHTML= trailerType.charAt(0).toUpperCase() + trailerType.slice(1) + " Trailers";
+    // console.log(setUrl)
+    const response = await fetch(setUrl, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
