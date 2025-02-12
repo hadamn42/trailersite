@@ -43,3 +43,11 @@ export function renderTemplate(templateFn, list, parentHTML, clear = false){
     }
     parentElement.insertAdjacentHTML("afterbegin", htmlString.join(""));
 }
+
+export function getStorage(source){
+    return localStorage.getItem(source);
+}
+
+export function setStorage(name, source){
+    localStorage.setItem(name, source);
+}

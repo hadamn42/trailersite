@@ -10,7 +10,7 @@ function trailerTemplate(trailer){
             src="${trailer.thumbnail}"
             alt="${trailer.title}"
             />
-       <h2 class="movie-title">${trailer.title}</h2></div>
+            <p class="movie-title">${trailer.title}</p></div>
         </a>
     </li>
     `;

@@ -1,15 +1,9 @@
 import { getMovieData, getTrailers } from "./util.mjs"
 import { trailerConstruct } from "./TrailerBlock.mjs";
 import { switchButton } from "./trailerSwitch.mjs";
-// import { playButton } from "./trailerPlay.mjs";
+import { searchButton } from "./searchButton.mjs";
 
-
-// const url = "https://api.kinocheck.com/trailers/trending?language=en";
 const url = "https://api.kinocheck.com/trailers/";
-// const test2 = "?language=en";
-// const movieUrl = "https://api.kinocheck.com/movies?imdb_id=tt10676052&language=en";
-// const trailerUrl = "https://api.kinocheck.com/trailer/jt9q/the-fantastic-four-first-steps-trailer-2025-marvel";
-// const apiKey = 'YOUR_API_KEY';
 
 const trailers = getTrailers(url);
 trailers.then(function(result) {
@@ -23,5 +17,26 @@ trailers.then(function(result) {
 });
 
 switchButton();
+searchButton();
 
 
+const movieSearch ="http://www.omdbapi.com/?apikey=d1259750&s=plankton";
+const movieData = getMovieData(movieSearch);
+// movieData.then(function(result) {
+    
+//     result.Search.map((item) => {
+//         console.log(item);
+//     });
+// });
+movieData.then(function(result) {
+    
+    // console.log(result.Search);
+    const razzy = JSON.stringify(result.Search);
+    // console.log(razzy);
+
+    localStorage.setItem("search", razzy);
+    const test = localStorage.getItem("search");
+    const test1 = JSON.parse(test);
+    // console.log(test1[0]);
+
+});
