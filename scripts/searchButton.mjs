@@ -17,12 +17,18 @@ export function searchButton() {
 
         const searchResults = getMovieData(searchUrl);
         searchResults.then(function(results){
-            const rexults = JSON.stringify(results.Search);
+            let testResults = results.Search
+            
+            if (testResults === undefined){
+                testResults = "none";
+            }   
+            const rexults = JSON.stringify(testResults);
             setStorage("search", rexults);
             // const test = getStorage("search");
             // const readable = JSON.parse(test);
             // console.log(readable);
             window.location.href = "../search/index.html";
+
         });
         
         

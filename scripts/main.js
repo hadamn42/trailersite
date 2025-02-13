@@ -1,7 +1,9 @@
-import { getMovieData, getTrailers } from "./util.mjs"
+import { getMovieData, getTrailers, loadHeaderFooter } from "./util.mjs"
 import { trailerConstruct } from "./TrailerBlock.mjs";
 import { switchButton } from "./trailerSwitch.mjs";
 import { searchButton } from "./searchButton.mjs";
+
+loadHeaderFooter();
 
 const url = "https://api.kinocheck.com/trailers/";
 
@@ -17,7 +19,7 @@ trailers.then(function(result) {
 });
 
 switchButton();
-searchButton();
+// searchButton();
 
 
 const movieSearch ="http://www.omdbapi.com/?apikey=d1259750&s=plankton";

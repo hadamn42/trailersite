@@ -1,3 +1,5 @@
+import { searchButton } from "./searchButton.mjs";
+
 export async function getTrailers(url, trailerType = "latest"){
     const setUrl = url + trailerType + "?language=en";
     const headerName = document.getElementById("trailers-title");
@@ -37,11 +39,17 @@ export async function getMovieData(url){
 
 export function renderTemplate(templateFn, list, parentHTML, clear = false){
     const parentElement = parentHTML;
-    const htmlString = list.map(templateFn);
-    if (clear){
-        parentElement.innerHTML = "";
+
+    if (list === "none"){
+        parentElement.innerHTML = "<p>No results returned.</p>";
+
+    }else{
+        const htmlString = list.map(templateFn);
+        if (clear){
+            parentElement.innerHTML = "";
+        }
+        parentElement.insertAdjacentHTML("afterbegin", htmlString.join(""));
     }
-    parentElement.insertAdjacentHTML("afterbegin", htmlString.join(""));
 }
 
 export function getStorage(source){
@@ -51,3 +59,28 @@ export function getStorage(source){
 export function setStorage(name, source){
     localStorage.setItem(name, source);
 }
+
+export async function loadHeaderFooter(){
+
+  
+    const headerTemp = await loadTemplate("../partials/header.html");
+    const header = document.querySelector("#header-all");
+    const footerTemp = await loadTemplate("../partials/footer.html");
+    const footer = document.querySelector("#footer-all");
+  
+    
+  
+    renderWithTemplate(headerTemp, header);  
+    renderWithTemplate(footerTemp, footer);
+    searchButton();
+  }
+
+  function renderWithTemplate (temp, parentElement) {
+    parentElement.innerHTML = temp;
+  }
+
+  async function loadTemplate(path) {
+    const res = await fetch(path);
+    const template = await res.text();
+    return template;
+  }

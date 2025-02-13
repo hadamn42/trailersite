@@ -18,9 +18,9 @@ export function playButton() {
 }
 
 function trailerHtml(trailerId){
-    return `<iframe width="1280" height="640" 
+    return `<iframe  
     src= "https://www.youtube.com/embed/${trailerId}" 
-    title="this DEEP BLACK CRACK … is a BIG problem for CRAIGIE BOY!" frameborder="0" 
+    frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 }
