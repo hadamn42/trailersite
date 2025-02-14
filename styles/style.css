@@ -42,6 +42,26 @@ header h1 {
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    animation: h1anima 2s linear 2 alternate;
+}
+
+@keyframes h1anima {
+    0% {
+        /* background-color: blue; */
+        transform: translateY(0);
+    }
+    33% {
+        /* background-color: yellow; */
+        transform: translateY(50px);
+    }
+    66% {
+        /* background-color: red; */
+        transform: rotateY(100px);
+    }
+    100% {
+        /* background-color: brown; */
+        transform: rotateY(150px);
+    }
 }
 
 a {
