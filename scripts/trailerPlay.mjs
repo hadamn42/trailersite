@@ -1,10 +1,12 @@
+
+// lets the play button work
 export function playButton() {
     const trailerLink = document.querySelectorAll(".player-button");
     const palyer = document.getElementById("player");
-    const trial1 = document.querySelector("a");
+    // const trial1 = document.querySelector("a");
     trailerLink.forEach((button) => {
         button.addEventListener("click", (event) => {
-            // buttonId = button.id;
+
             // console.log(button.id);
             event.preventDefault();
             palyer.classList.replace("hide", "show");
