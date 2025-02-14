@@ -1,6 +1,6 @@
 import { getMovieData, setStorage, getStorage } from "./util.mjs";
 
-const omdbUrl = "http://www.omdbapi.com/?apikey=d1259750&s=";
+const omdbUrl = "https://www.omdbapi.com/?apikey=d1259750&s=";
 
 export function searchButton() {
     // const sb = document.getElementById("button-search");
