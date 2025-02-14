@@ -1,17 +1,18 @@
 import { searchButton } from "./searchButton.mjs";
 
+// function to get the trailers 
 export async function getTrailers(url, trailerType = "latest"){
     const setUrl = url + trailerType + "?language=en";
     const headerName = document.getElementById("trailers-title");
+
+    // Set up to show whether it is latest or trending trailers
     headerName.innerHTML= trailerType.charAt(0).toUpperCase() + trailerType.slice(1) + " Trailers";
-    // console.log(setUrl)
+    // kinocheck uses this kind of fetch request
     const response = await fetch(setUrl, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            // 'X-Api-Key': apiKey,
-            // 'X-Api-Host': 'api.kinocheck.com'
         }
     });
 
@@ -29,6 +30,7 @@ async function convertToJson(res) {
     }
 }
 
+// function to call omdb API. doesn't use headers so I had to use a different function
 export async function getMovieData(url){
     const response = await fetch(url);
 
@@ -40,6 +42,7 @@ export async function getMovieData(url){
 export function renderTemplate(templateFn, list, parentHTML, clear = false){
     const parentElement = parentHTML;
 
+    // to prevent an error when a search returns nothing
     if (list === "none"){
         parentElement.innerHTML = "<p>No results returned.</p>";
 
@@ -52,6 +55,8 @@ export function renderTemplate(templateFn, list, parentHTML, clear = false){
     }
 }
 
+
+// getting and storing stuff from the local source to create the movie's page from the search results
 export function getStorage(source){
     return localStorage.getItem(source);
 }
@@ -60,20 +65,7 @@ export function setStorage(name, source){
     localStorage.setItem(name, source);
 }
 
-// export async function loadHeaderFooter(){
 
-  
-//     const headerTemp = await loadTemplate("../partials/header.html");
-//     const header = document.querySelector("#header-all");
-//     const footerTemp = await loadTemplate("../partials/footer.html");
-//     const footer = document.querySelector("#footer-all");
-  
-    
-  
-//     renderWithTemplate(headerTemp, header);  
-//     renderWithTemplate(footerTemp, footer);
-//     searchButton();
-//   }
 
 export function renderWithTemplate (temp, parentElement) {
     parentElement.innerHTML = temp;

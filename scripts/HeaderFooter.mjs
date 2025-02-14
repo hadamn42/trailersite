@@ -8,6 +8,8 @@ export class HeaderFooter {
     
     init(){
         let header;
+        // main header has different paths needed, so I have it using a different template.
+        // easier than trying to make more complicated code
         if (this.main == true){
             header = theHeaderMain();
         }else{
