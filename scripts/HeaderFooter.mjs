@@ -15,13 +15,13 @@ export class HeaderFooter {
         }
 
         let footer = theFooter();
-        loadHeaderFooter(header, footer);        
+        loadHeaderFooter(header, footer, this.main);        
     }
     
 
 }
 
-function loadHeaderFooter(headerTemp, footerTemp){
+function loadHeaderFooter(headerTemp, footerTemp, main){
 
   
     
@@ -33,7 +33,7 @@ function loadHeaderFooter(headerTemp, footerTemp){
   
     renderWithTemplate(headerTemp, header);  
     renderWithTemplate(footerTemp, footer);
-    searchButton();
+    searchButton(main);
   }
 
 function theHeaderMain() {

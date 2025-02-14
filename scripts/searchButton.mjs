@@ -2,7 +2,7 @@ import { getMovieData, setStorage, getStorage } from "./util.mjs";
 
 const omdbUrl = "https://www.omdbapi.com/?apikey=d1259750&s=";
 
-export function searchButton() {
+export function searchButton(main1) {
     // const sb = document.getElementById("button-search");
     const form = document.getElementById("search-section");
     const searchData = document.getElementById("search-bar");
@@ -27,8 +27,11 @@ export function searchButton() {
             // const test = getStorage("search");
             // const readable = JSON.parse(test);
             // console.log(readable);
-            window.location.href = "./search/index.html";
-
+            if(main1 == true){
+                window.location.href = "./search/index.html";
+            }else{
+                window.location.href = "../search/index.html";
+            }
         });
         
         
