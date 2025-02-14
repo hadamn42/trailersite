@@ -22,7 +22,7 @@ trailers.then(function(result) {
 switchButton();
 
 
-const movieSearch ="http://www.omdbapi.com/?apikey=d1259750&s=plankton";
+const movieSearch ="https://www.omdbapi.com/?apikey=d1259750&s=plankton";
 const movieData = getMovieData(movieSearch);
 
 movieData.then(function(result) {
