@@ -1,4 +1,4 @@
-// import { searchButton } from "./searchButton.mjs";
+
 import { MovieBuild } from "./MovieBuild.mjs";
 import { HeaderFooter } from "./HeaderFooter.mjs";
 

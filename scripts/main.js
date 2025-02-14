@@ -1,4 +1,4 @@
-import { getMovieData, getTrailers, loadHeaderFooter } from "./util.mjs"
+import { getMovieData, getTrailers } from "./util.mjs"
 import { trailerConstruct } from "./TrailerBlock.mjs";
 import { switchButton } from "./trailerSwitch.mjs";
 import { HeaderFooter } from "./HeaderFooter.mjs";
