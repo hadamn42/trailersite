@@ -24,7 +24,7 @@ function buildUrl() {
     const thisUrl = window.location.href;
     const index = thisUrl.indexOf("=");
     const finalString = thisUrl.substring(index + 1);
-    return  "http://www.omdbapi.com/?apikey=d1259750&plot=full&i=" + finalString;
+    return  "https://www.omdbapi.com/?apikey=d1259750&plot=full&i=" + finalString;
 }
 
 export function infoBuild() {
