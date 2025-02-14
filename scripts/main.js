@@ -4,7 +4,7 @@ import { switchButton } from "./trailerSwitch.mjs";
 import { HeaderFooter } from "./HeaderFooter.mjs";
 
 
-const loaderHeaderFooter = new HeaderFooter();
+const loaderHeaderFooter = new HeaderFooter(true);
 loaderHeaderFooter.init();
 
 const url = "https://api.kinocheck.com/trailers/";

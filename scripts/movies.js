@@ -3,7 +3,7 @@ import { MovieBuild } from "./MovieBuild.mjs";
 import { HeaderFooter } from "./HeaderFooter.mjs";
 
 
-const loaderHeaderFooter = new HeaderFooter();
+const loaderHeaderFooter = new HeaderFooter(false);
 loaderHeaderFooter.init();
 
 const thisUrl = window.location.href;

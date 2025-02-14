@@ -3,7 +3,7 @@ import { resultConstruct } from "./buildResults.mjs";
 import { HeaderFooter } from "./HeaderFooter.mjs";
 
 
-const loaderHeaderFooter = new HeaderFooter();
+const loaderHeaderFooter = new HeaderFooter(false);
 loaderHeaderFooter.init();
 
 const resultList = JSON.parse(getStorage("search"));

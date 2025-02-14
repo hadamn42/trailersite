@@ -9,7 +9,7 @@ export function playButton() {
             event.preventDefault();
             palyer.classList.replace("hide", "show");
             const newSrc= button.id;
-            console.log(newSrc);
+            // console.log(newSrc);
             const playerHtml = trailerHtml(newSrc);
             palyer.innerHTML = playerHtml;
 
