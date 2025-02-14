@@ -32,7 +32,7 @@ export function infoBuild() {
     const movieDato = getMovieData(reqUrl);
     movieDato.then(function(result){
         createPage(result);
-        console.log(result);
+        // console.log(result);
     });
 }
 
