@@ -1,8 +1,10 @@
 // import { searchButton } from "./searchButton.mjs";
 import { MovieBuild } from "./MovieBuild.mjs";
-import { loadHeaderFooter } from "./util.mjs";
+import { HeaderFooter } from "./HeaderFooter.mjs";
 
-loadHeaderFooter();
+
+const loaderHeaderFooter = new HeaderFooter();
+loaderHeaderFooter.init();
 
 const thisUrl = window.location.href;
 const index = thisUrl.indexOf("=");

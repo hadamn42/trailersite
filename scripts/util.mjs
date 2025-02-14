@@ -60,22 +60,22 @@ export function setStorage(name, source){
     localStorage.setItem(name, source);
 }
 
-export async function loadHeaderFooter(){
+// export async function loadHeaderFooter(){
 
   
-    const headerTemp = await loadTemplate("../partials/header.html");
-    const header = document.querySelector("#header-all");
-    const footerTemp = await loadTemplate("../partials/footer.html");
-    const footer = document.querySelector("#footer-all");
+//     const headerTemp = await loadTemplate("../partials/header.html");
+//     const header = document.querySelector("#header-all");
+//     const footerTemp = await loadTemplate("../partials/footer.html");
+//     const footer = document.querySelector("#footer-all");
   
     
   
-    renderWithTemplate(headerTemp, header);  
-    renderWithTemplate(footerTemp, footer);
-    searchButton();
-  }
+//     renderWithTemplate(headerTemp, header);  
+//     renderWithTemplate(footerTemp, footer);
+//     searchButton();
+//   }
 
-  function renderWithTemplate (temp, parentElement) {
+export function renderWithTemplate (temp, parentElement) {
     parentElement.innerHTML = temp;
   }
 
