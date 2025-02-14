@@ -20,20 +20,3 @@ trailers.then(function(result) {
 });
 
 switchButton();
-
-
-// const movieSearch ="https://www.omdbapi.com/?apikey=d1259750&s=plankton";
-// const movieData = getMovieData(movieSearch);
-
-// movieData.then(function(result) {
-    
-//     // console.log(result.Search);
-//     const razzy = JSON.stringify(result.Search);
-//     // console.log(razzy);
-
-//     localStorage.setItem("search", razzy);
-//     const test = localStorage.getItem("search");
-//     // const test1 = JSON.parse(test);
-//     // console.log(test1[0]);
-
-// });
