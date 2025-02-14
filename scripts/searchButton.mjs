@@ -27,7 +27,7 @@ export function searchButton() {
             // const test = getStorage("search");
             // const readable = JSON.parse(test);
             // console.log(readable);
-            window.location.href = "../search/index.html";
+            window.location.href = "./search/index.html";
 
         });
         

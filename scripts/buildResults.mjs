@@ -2,7 +2,7 @@ import { renderTemplate } from "./util.mjs";
 
 function resultsTemplate(result){
     return `<li class="result-card">
-        <a href="../movies/index.html?movie=${result.imdbID}" id = "${result.imdbID}">
+        <a href="./movies/index.html?movie=${result.imdbID}" id = "${result.imdbID}">
             <div class = "poster">
                 <img
                     src="${result.Poster}"
