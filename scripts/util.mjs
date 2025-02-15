@@ -80,8 +80,3 @@ export function renderWithTemplate (temp, parentElement) {
     parentElement.innerHTML = temp;
   }
 
-// async function loadTemplate(path) {
-// const res = await fetch(path);
-// const template = await res.text();
-// return template;
-// }
