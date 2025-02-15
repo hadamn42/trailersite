@@ -2,11 +2,16 @@ import { searchButton } from "./searchButton.mjs";
 
 // function to get the trailers 
 export async function getTrailers(url, trailerType = "latest"){
+    
+    // builds the call url. probably didn't need the url as an argument. 
     const setUrl = url + trailerType + "?language=en";
+    
+    //grabs the title to let us know what we're looking at (latest or trending)
     const headerName = document.getElementById("trailers-title");
 
     // Set up to show whether it is latest or trending trailers
     headerName.innerHTML= trailerType.charAt(0).toUpperCase() + trailerType.slice(1) + " Trailers";
+    
     // kinocheck uses this kind of fetch request
     const response = await fetch(setUrl, {
         method: 'GET',
@@ -21,6 +26,7 @@ export async function getTrailers(url, trailerType = "latest"){
     return data;
 }
 
+// basic convert to JSON request
 async function convertToJson(res) {
     if (res.ok){
         const yes = await res.json();
@@ -39,6 +45,9 @@ export async function getMovieData(url){
     return data;
 }
 
+
+//renders the template of whatever into the HTML of the page.
+//both for the trailer and the search results
 export function renderTemplate(templateFn, list, parentHTML, clear = false){
     const parentElement = parentHTML;
 
@@ -66,13 +75,13 @@ export function setStorage(name, source){
 }
 
 
-
+// adds the template html to the parent element
 export function renderWithTemplate (temp, parentElement) {
     parentElement.innerHTML = temp;
   }
 
-  async function loadTemplate(path) {
-    const res = await fetch(path);
-    const template = await res.text();
-    return template;
-  }
+// async function loadTemplate(path) {
+// const res = await fetch(path);
+// const template = await res.text();
+// return template;
+// }

@@ -1,4 +1,4 @@
-import { getMovieData, setStorage, getStorage } from "./util.mjs";
+import { getMovieData, setStorage } from "./util.mjs";
 
 const omdbUrl = "https://www.omdbapi.com/?apikey=d1259750&s=";
 
