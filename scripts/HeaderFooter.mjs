@@ -43,11 +43,12 @@ return `<a href="./index.html">
 <h1>Trailer Center</h1>
 </a>
 <form id="search-section">
-    <label id="search-label" name="searchBarLabel">
-    <input type="text" name="searchBar" id="search-bar" placeholder="search movie titles"></label>  
-    <button id="button-search" type="submit">
-        <img src="./images/magnifying.svg" alt="Created by Daniel Bruce" id="search-icon"/>
-    </button>
+    <label id="search-label" name="searchBarLabel">Search  
+        <input type="text" name="searchBar" id="search-bar" placeholder="search movie titles"> 
+        <button id="button-search" type="submit">
+            <img src="./images/magnifying.svg" alt="Created by Daniel Bruce" id="search-icon"/>
+        </button>
+    </label> 
 </form>`;
 
 }
