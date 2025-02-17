@@ -1,7 +1,7 @@
 import { renderTemplate } from "./util.mjs";
 import { playButton } from "./trailerPlay.mjs";
 
-
+// returns the template HTML
 function trailerTemplate(trailer){
     return `<li class="trailer-card">
         <a href="#" id = "${trailer.youtube_video_id}" 

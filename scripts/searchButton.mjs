@@ -1,5 +1,8 @@
 import { getMovieData, setStorage } from "./util.mjs";
 
+// the API address we are requesting from
+// there's probably a safer way to use the API key
+// but they didn't want that.
 const omdbUrl = "https://www.omdbapi.com/?apikey=d1259750&s=";
 
 

@@ -50,6 +50,7 @@ export function switchButton(){
                 // console.log(array);
                 trailerConstruct(array, "true");
             });
+            //swaps the class around
             button.classList.replace("trending", "latest");
         }
     });

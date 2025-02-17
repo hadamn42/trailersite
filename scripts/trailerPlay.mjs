@@ -32,6 +32,7 @@ export function playButton() {
   });
 }
 
+// returns the template HTML for the player
 function trailerHtml(trailerId){
     return `<iframe  
     src= "https://www.youtube.com/embed/${trailerId}" 

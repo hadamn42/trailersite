@@ -1,5 +1,6 @@
 import { renderTemplate } from "./util.mjs";
 
+// the Template of the search results
 function resultsTemplate(result){
     return `<li class="result-card">
         <a href="../movies/index.html?movie=${result.imdbID}" id = "${result.imdbID}">
@@ -17,8 +18,14 @@ function resultsTemplate(result){
     `;
 }
 
+// function to add the resutls already created into a list into the parent HTML
 export function resultConstruct(list){
+
+    // calls the parent HTML
     const parentHTML = document.getElementById("results-list");
+
+    // calls the function to run the array of results into the appropriate template, 
+    // then add those results into the parent HTML
     renderTemplate(resultsTemplate, list, parentHTML, "true");
 
 }

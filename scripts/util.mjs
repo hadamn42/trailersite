@@ -12,7 +12,9 @@ export async function getTrailers(url, trailerType = "latest"){
     // Set up to show whether it is latest or trending trailers
     headerName.innerHTML= trailerType.charAt(0).toUpperCase() + trailerType.slice(1) + " Trailers";
     
-    // kinocheck uses this kind of fetch request
+    // kinocheck uses this kind of fetch request\
+    // omdb does not, whcih is why I didn't set up a single fetch
+    // function for both to use.
     const response = await fetch(setUrl, {
         method: 'GET',
         headers: {

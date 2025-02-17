@@ -1,5 +1,6 @@
 import { getMovieData } from "./util.mjs";
 
+// returns the template HTML for the movie data
 function movieTemplate(result){
     return `<section id="movie-container">
     <div id = "movie-posters"><img
