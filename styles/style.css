@@ -47,20 +47,16 @@ header h1 {
 
 @keyframes h1anima {
     0% {
-        /* background-color: blue; */
         transform: translateY(0);
     }
     33% {
-        /* background-color: yellow; */
         transform: translateY(50px);
     }
     66% {
-        /* background-color: red; */
-        transform: rotateY(100px);
+        transform: translateY(100px);
     }
     100% {
-        /* background-color: brown; */
-        transform: rotateY(150px);
+        transform: translateY(150px);
     }
 }
 
