@@ -42,10 +42,10 @@ header h1 {
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    animation: h1anima 2s linear 2 alternate;
+   /* animation: h1anima 2s linear 2 alternate; */
 }
 
-@keyframes h1anima {
+/* @keyframes h1anima {
     0% {
         transform: translateY(0);
     }
@@ -58,7 +58,7 @@ header h1 {
     100% {
         transform: translateY(150px);
     }
-}
+} */
 
 a {
     color: var(--font-color);
